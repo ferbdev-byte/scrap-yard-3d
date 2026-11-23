@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --color-ink-950: #0c0d0f;
+  --color-ink-900: #131518;
+  --color-ink-800: #1b1e22;
+  --color-ink-700: #262a30;
+  --color-ink-500: #5b626c;
+  --color-ink-300: #a3aab4;
+  --color-gold: #e3b341;
+}
+
+html, body, #root { height: 100%; }
+html { background: var(--color-ink-950); color: #e7e9ec; color-scheme: dark; }
+
+:where(button, a):focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
